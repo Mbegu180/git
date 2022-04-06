@@ -1,0 +1,117 @@
+
+D:\WORKSPACE\git>cd one
+
+D:\WORKSPACE\git\one>git init
+Initialized empty Git repository in D:/WORKSPACE/git/one/.git/
+
+D:\WORKSPACE\git\one>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master.txt.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\WORKSPACE\git\one>git add .
+
+D:\WORKSPACE\git\one>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   master.txt.txt
+
+
+D:\WORKSPACE\git\one>git commit -m "This is my First git Commit"
+[master (root-commit) ba89ddd] This is my First git Commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 master.txt.txt
+
+D:\WORKSPACE\git\one>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\WORKSPACE\git\one>git log
+commit ba89ddd1fad65ef523aabf7a9770aee869486f83 (HEAD -> master)
+Author: Mbegu180 <mbegu.ahmed180@gmail.com>
+Date:   Thu Mar 31 20:43:38 2022 +0300
+
+    This is my First git Commit
+
+D:\WORKSPACE\git\one>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   master.txt.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        master1.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\WORKSPACE\git\one>git add .
+
+D:\WORKSPACE\git\one>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   master.txt.txt
+        new file:   master1.txt.txt
+
+
+D:\WORKSPACE\git\one>git -commit -m "this is my second changes"
+unknown option: -commit
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+D:\WORKSPACE\git\one>git commit -m "this is my second changes"
+[master ce763f8] this is my second changes
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 master1.txt.txt
+
+D:\WORKSPACE\git\one>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\WORKSPACE\git\one>git log
+commit ce763f8b54f1c1d161154a452ee19689b6ab80ca (HEAD -> master)
+Author: Mbegu180 <mbegu.ahmed180@gmail.com>
+Date:   Thu Mar 31 20:51:50 2022 +0300
+
+    this is my second changes
+
+commit ba89ddd1fad65ef523aabf7a9770aee869486f83
+Author: Mbegu180 <mbegu.ahmed180@gmail.com>
+Date:   Thu Mar 31 20:43:38 2022 +0300
+
+    This is my First git Commit
+
+D:\WORKSPACE\git\one>git remote add origin https://github.com/Mbegu180/git.git
+
+D:\WORKSPACE\git\one>git remote -v
+origin  https://github.com/Mbegu180/git.git (fetch)
+origin  https://github.com/Mbegu180/git.git (push)
+
+D:\WORKSPACE\git\one>git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 564 bytes | 282.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mbegu180/git.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+D:\WORKSPACE\git\one>
